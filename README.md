@@ -6,10 +6,13 @@ Make sure you have the following installed on your machine:
 - [Node.js](https://nodejs.org/en)
 - [npm](https://www.npmjs.com/) (Node Package Manager)
 
-  **Cloning the Repository**
+**Cloning the Repository**
 
 ```bash
 git clone https://github.com/AshishSharma-0610/to-do-app.git
+```
+**Navigate to the project directory**
+```bash
 cd to-do-app
 ```
 

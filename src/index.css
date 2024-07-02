@@ -1,0 +1,157 @@
+/* Define global color variables for consistent theming */
+:root {
+  --background: #fff;
+  --text: #414856;
+  --check: #4f29f0;
+  --disabled: #c3c8de;
+  --border-radius: 10px;
+}
+
+/* Basic body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+  color: var(--text);
+}
+
+/* Main app container styling */
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--background);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(65, 72, 86, 0.05);
+}
+
+/* Header styling */
+h1 {
+  color: var(--check);
+  text-align: center;
+}
+
+/* TaskInput component styling */
+.task-input {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.task-input input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid var(--check);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.task-input button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: var(--check);
+  color: white;
+  border: none;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  cursor: pointer;
+}
+
+/* Checklist container styling to create "coming out" effect */
+#checklist-container {
+  background-color: var(--background);
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+#checklist {
+  background: var(--background);
+  border-radius: var(--border-radius);
+  padding: 20px;
+}
+
+/* Individual task item styling */
+.task-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+}
+
+.task-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Task label styling */
+.task-item label {
+  flex-grow: 1;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Custom checkbox styling */
+.task-item input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--check);
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.task-item input[type="checkbox"]:checked {
+  background-color: var(--check);
+}
+
+/* Checkmark for checked items */
+.task-item input[type="checkbox"]:checked::before {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+}
+
+/* Styling for completed tasks */
+.task-item input[type="checkbox"]:checked+label {
+  text-decoration: line-through;
+  color: var(--disabled);
+}
+
+/* Button styling within task items */
+.task-item button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: var(--check);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.task-item button:hover {
+  background-color: #3d20b8;
+}
+
+/* Styling for edit mode input */
+.task-item input[type="text"] {
+  flex-grow: 1;
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 16px;
+  border: 2px solid var(--check);
+  border-radius: 5px;
+}
